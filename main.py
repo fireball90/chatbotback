@@ -62,7 +62,7 @@ def get_db():
 
 db_dependency = Annotated[Session, Depends(get_db)]
 
-openai_api_key = os.getenv("OPENAI_API_KEY", "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")
+openai_api_key = os.getenv("OPENAI_API_KEY", "apikey")
 
 loader = DirectoryLoader('data', glob='**/*.txt')
 documents = loader.load()
